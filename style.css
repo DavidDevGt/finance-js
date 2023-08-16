@@ -189,11 +189,6 @@ label {
     transform: translateY(-50%) rotate(90deg);  /* Rota el ícono 90 grados cuando el acordeón está abierto */
 }
 
-.btn-danger {
-    border-radius: 7px!important;
-}
-
-
 
 /* Media queries */
 @media (max-width: 576px) {
