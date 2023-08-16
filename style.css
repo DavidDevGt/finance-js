@@ -134,6 +134,17 @@ label {
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.list-group li .item-text {
+    flex: 1; /* toma todo el espacio disponible */
+    padding-right: 10px; /* da un poco de espacio entre el texto y el botón */
+}
+
+.list-group li .btn-delete {
+    flex-shrink: 0; /* evita que el botón se reduzca */
+    padding: 5px 10px; /* reduce el padding del botón para que no sea tan grande */
+    white-space: nowrap; /* evita que el texto del botón se rompa en varias líneas */
+}
+
 .list-group li:last-child {
     margin-bottom: 0;
 }
@@ -230,5 +241,10 @@ label {
         display: block;
         width: 100%;
         margin-top: 20px;
+    }
+
+    .list-group li .btn-delete {
+        width: auto; /* anula el ancho completo en móvil para este botón específico */
+        margin-left: auto; /* empuja el botón hacia la derecha */
     }
 }
