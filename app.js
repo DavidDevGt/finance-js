@@ -20,7 +20,7 @@ class UI {
         const item = document.createElement('li');
         item.innerHTML = `
             <span class="${color}">${transaccion.descripcion} - Q${transaccion.cantidad.toFixed(2)}</span> 
-            <button class="btn btn-danger btn-sm delete">X</button>
+            <button class="btn btn-delete btn-danger btn-sm delete">X</button>
         `;
         lista.appendChild(item);
     }
