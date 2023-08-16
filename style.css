@@ -127,10 +127,10 @@ label {
     justify-content: space-between;
     align-items: center;
     background-color: var(--list-item-bg);
-    padding: 10px 15px;
+    padding: 5px 10px;
     border-radius: 8px;
     box-shadow: var(--shadow-subtle);
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
