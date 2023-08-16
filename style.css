@@ -137,12 +137,11 @@ label {
 .list-group li .item-text {
     flex: 1; /* toma todo el espacio disponible */
     padding-right: 10px; /* da un poco de espacio entre el texto y el botón */
-    font-size: 10px;
 }
 
 .list-group li .btn-delete {
     flex-shrink: 0; /* evita que el botón se reduzca */
-    /* padding: 5px 10px; reduce el padding del botón para que no sea tan grande */
+    padding: 5px 10px;
     white-space: nowrap; /* evita que el texto del botón se rompa en varias líneas */
 }
 
@@ -248,4 +247,9 @@ label {
         width: auto; /* anula el ancho completo en móvil para este botón específico */
         margin-left: auto; /* empuja el botón hacia la derecha */
     }
+    
+    .list-group li .item-text {
+    font-size: 10px;
+}
+    
 }
