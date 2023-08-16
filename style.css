@@ -249,7 +249,11 @@ label {
     }
     
     .list-group li .item-text {
-    font-size: 10px;
-}
+    font-size: 11px;
+    }
+
+    table {
+        font-size: 11px;
+    }
     
 }
