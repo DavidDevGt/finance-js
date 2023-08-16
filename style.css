@@ -137,7 +137,7 @@ label {
 .list-group li .item-text {
     flex: 1; /* toma todo el espacio disponible */
     padding-right: 10px; /* da un poco de espacio entre el texto y el botón */
-    font-size: 14px;
+    font-size: 10px;
 }
 
 .list-group li .btn-delete {
