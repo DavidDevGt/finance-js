@@ -1,0 +1,161 @@
+/* Variables */
+:root {
+    --primary-color: #007AFF;
+    --primary-dark: #005BB5;
+    --info-color: #5AC8FA;
+    --info-dark: #3FA7D6;
+    --background-light: #F7F8FC;
+    --background-card: #FFF;
+    --border-color: #E0E0E0;
+    --text-color: #333;
+    --font-main: 'San Francisco', Helvetica, Arial, sans-serif;
+    --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.05);
+    --list-item-bg: #FAFAFC;
+    --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+body {
+    background-color: var(--background-light);
+    color: var(--text-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 20px;
+    background-color: var(--background-card);
+    border-radius: 12px;
+    box-shadow: var(--shadow-light);
+}
+
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 0.9em;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    outline: none;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--background-card);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+.btn-info {
+    background-color: var(--info-color);
+    color: var(--background-card);
+}
+
+.btn-info:hover {
+    background-color: var(--info-dark);
+}
+
+.list-group {
+    list-style-type: none;
+    padding: 10px 0;
+}
+
+#graficoFinanzas {
+    margin: 24px 0;
+    display: block;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+table th {
+    background-color: #F5F6FA;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+
+/* Lista de transacciones */
+.list-group {
+    list-style-type: none;
+    padding: 0;
+}
+
+.list-group li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--list-item-bg);
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-subtle);
+    margin-bottom: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.list-group li:last-child {
+    margin-bottom: 0;
+}
+
+.list-group li:hover {
+    transform: translateY(-3px);  /* Efecto levitación */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Media queries */
+@media (max-width: 576px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
