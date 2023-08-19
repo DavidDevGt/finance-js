@@ -1,6 +1,6 @@
 class Transaccion {
     constructor(descripcion, tipo, cantidad) {
-        this.fecha = new Date().toISOString().split('T')[0]; // Formato "yyyy-MM-dd"
+        this.fecha = new Date().toISOString().split('T')[0]; // Formato gringo para la fecha
         this.descripcion = descripcion;
         this.tipo = tipo;
         this.cantidad = cantidad;
@@ -52,11 +52,11 @@ class UI {
             if (transaccion.tipo === 'ingreso') {
                 totalIngresos += transaccion.cantidad;
             } else {
-                totalGastos -= transaccion.cantidad;  // Usamos -= para restar el gasto
+                totalGastos -= transaccion.cantidad;  // restar el gasto
             }
         });
 
-        let balance = totalIngresos + totalGastos;  // En totalGastos ya está el valor negativo
+        let balance = totalIngresos + totalGastos;
 
         const tablaTransacciones = document.getElementById('tablaTransacciones');
         const filaBalance = document.createElement('tr');
@@ -116,7 +116,7 @@ class Almacenamiento {
 
 function actualizarGrafico() {
     if(window.miGrafico) {
-        window.miGrafico.destroy(); // Destruimos el gráfico anterior para evitar superposiciones
+        window.miGrafico.destroy(); // borra el gráfico pasado
     }
 
     const transacciones = Almacenamiento.obtenerTransacciones();
@@ -204,8 +204,8 @@ document.getElementById('btnFiltrar').addEventListener('click', () => {
 document.getElementById('btnBorrarTodo').addEventListener('click', () => {
     Almacenamiento.borrarTodo();
     UI.borrarTodoDeLista();
-    UI.mostrarTransacciones();  // Para actualizar la lista mostrada
-    UI.llenarTabla();           // Para actualizar la tabla
-    actualizarGrafico();       // Para actualizar el gráfico
+    UI.mostrarTransacciones();
+    UI.llenarTabla();
+    actualizarGrafico();
 });
 
