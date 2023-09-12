@@ -8,7 +8,7 @@
     --background-card: #FFF;
     --border-color: #E0E0E0;
     --text-color: #333;
-    --font-main: 'San Francisco', Helvetica, Arial, sans-serif;
+    --font-main: Inter, sans-serif;
     --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.05);
     --list-item-bg: #FAFAFC;
     --shadow-subtle: 0 2px 8px rgba(0, 0, 0, 0.03);
@@ -20,12 +20,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--font-main);
 }
 
 body {
     background-color: var(--background-light);
     color: var(--text-color);
+    font-family: var(--font-main);
 }
 
 .container {

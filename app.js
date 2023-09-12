@@ -9,6 +9,8 @@ document.getElementById("btnExportarImagen").addEventListener("click", () => {
 });
 
 
+/* La clase Transaccion es una clase de JavaScript que representa una transacción con propiedades como
+descripción, tipo y cantidad. */
 class Transaccion {
   constructor(descripcion, tipo, cantidad) {
     this.fecha = new Date().toISOString().split("T")[0]; // Formato gringo para la fecha
@@ -18,6 +20,8 @@ class Transaccion {
   }
 }
 
+/* La clase UI en JavaScript proporciona métodos para mostrar y manipular transacciones en una interfaz
+de usuario. */
 class UI {
   static mostrarTransacciones() {
     const transacciones = Almacenamiento.obtenerTransacciones();
@@ -118,6 +122,8 @@ class UI {
   }
 }
 
+/* La clase Almacenamiento proporciona métodos para almacenar y recuperar transacciones en el
+almacenamiento local. */
 class Almacenamiento {
   static obtenerTransacciones() {
     return JSON.parse(localStorage.getItem("transacciones")) || [];

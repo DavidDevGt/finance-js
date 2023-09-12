@@ -1,0 +1,268 @@
+/* Variables */
+:root {
+  --primary-color: #007aff;
+  --primary-dark: #005bb5;
+  --info-color: #5ac8fa;
+  --info-dark: #3fa7d6;
+  --background-light: #f7f8fc;
+  --background-card: #fff;
+  --border-color: #e0e0e0;
+  --text-color: #333;
+  --font-main: Inter, sans-serif;
+  --shadow-default: 0 2px 8px rgba(0, 0, 0, 0.03);
+  --hover-rise: translateY(-3px);
+  --transition-speed: 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-light);
+  color: var(--text-color);
+  font-family: var(--font-main);
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 20px;
+  background-color: var(--background-card);
+  border-radius: 12px;
+  box-shadow: var(--shadow-default);
+}
+
+h1 {
+  font-size: 1.8em;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.form-control,
+.btn {
+  border-radius: 10px;
+  font-size: 0.9em;
+  transition: var(--transition-speed);
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 16px;
+  border: 1px solid var(--border-color);
+  outline: none;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary,
+.btn-info {
+  color: var(--background-card);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.btn-info {
+  background-color: var(--info-color);
+}
+
+.btn-info:hover {
+  background-color: var(--info-dark);
+}
+
+.list-group {
+  list-style-type: none;
+  padding: 10px 0;
+}
+
+.list-group li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--list-item-bg);
+  padding: 5px 10px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-default);
+  margin-bottom: 5px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.list-group li .item-text {
+  flex: 1;
+  padding-right: 10px;
+}
+
+.list-group li:last-child {
+  margin-bottom: 0;
+}
+
+.list-group li:hover {
+  transform: var(--hover-rise);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilo básico del acordeón */
+.accordion {
+  width: 100%;
+  box-shadow: var(--shadow-default);
+}
+
+.accordion-header {
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: var(--primary-color);
+  color: var(--background-card);
+  font-weight: bold;
+  display: block;
+  position: relative;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-speed) ease;
+}
+
+.accordion-toggle:checked ~ .accordion-content {
+  max-height: 500px; /* Ajusta según necesidad */
+}
+
+.accordion-toggle {
+  display: none;
+}
+
+.accordion-header::before {
+  content: "»";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform var(--transition-speed);
+}
+
+.accordion-toggle:checked + .accordion-header::before {
+  transform: translateY(-50%) rotate(90deg);
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.btn-group button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Estilos base para la tabla */
+.table {
+  width: 100%;
+  background-color: var(--background-card);
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 10px 15px;
+  border: 1px solid var(--border-color);
+}
+
+.table th {
+  background-color: #f2f2f2;
+}
+
+.table .ingreso {
+  color: green;
+}
+
+.table .gasto {
+  color: red;
+}
+
+.table .balance-positivo {
+  color: green;
+}
+
+.table .balance-negativo {
+  color: red;
+}
+
+/* Media queries */
+@media (max-width: 576px) {
+  .container {
+    padding: 10px;
+    width: 95%;
+    margin: 10px auto;
+  }
+
+  h1 {
+    font-size: 1.6em;
+    margin-top: 20px;
+  }
+
+  #formularioTransaccion,
+  #listaTransacciones,
+  #graficoFinanzas,
+  table {
+    margin-top: 20px;
+  }
+
+  .form-control {
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  table {
+    font-size: 0.9em;
+  }
+
+  #btnBorrarTodo {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .list-group li .btn-delete {
+    width: auto;
+    margin-left: auto;
+  }
+
+  .list-group li .item-text {
+    font-size: 11px;
+  }
+
+  table {
+    font-size: 11px;
+  }
+}
