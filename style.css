@@ -200,6 +200,19 @@ label {
     transform: translateY(-50%) rotate(90deg);  /* Rota el ícono 90 grados cuando el acordeón está abierto */
 }
 
+.btn-group {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.btn-group button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 
 /* Media queries */
 @media (max-width: 576px) {
@@ -256,4 +269,38 @@ label {
         font-size: 11px;
     }
     
+}
+
+/* Estilo base para la tabla */
+.table {
+    width: 100%;
+    background-color: #FFFFFF;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #f2f2f2;
+}
+
+/* Estilos para ingresos y gastos */
+.table .ingreso {
+    color: green;  /* Verde oscuro */
+}
+
+.table .gasto {
+    color: red;
+}
+
+/* Estilos para el balance */
+.table .balance-positivo {
+    color: green;
+}
+
+.table .balance-negativo {
+    color: red;
 }
